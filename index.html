@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Finale</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap&subset=vietnamese"
+		rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/7b3b63fc99.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet" />
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--jquery  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- style css -->
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<div class="container-nav">
+		<div class="nav-links">
+			<ul class="first">
+				<li>
+					<a href="#">About</a>
+				</li>
+				<li class="container-dropdown-hover">
+					<a class="button-hover" href="#">Room</a>
+					<div class="dropdown-hover-content">
+						<a href="#">ROOM DETAILS</a>
+					</div>
+				</li>
+				<li>
+					<a href="#">Dining</a>
+				</li>
+			</ul>
+			<ul class="second">
+				<li>
+					<a href="#">Offers</a>
+				</li>
+				<li>
+					<a href="#footer">Contact</a>
+				</li>
+				<li>
+					<a href="#containerOrderBox">Find</a>
+				</li>
+			</ul>
+		</div>
+		<div id="home" class="nav-logo">
+			<a href="#home" style="text-decoration: none; color: #eef4bc;">
+				<h4>The dreamer hotel</h4>
+			</a>
+		</div>
+		<div class="nav-menu">
+			<i class="fas fa-ellipsis-h"></i>
+		</div>
+	</div>
+
+	<!--HEADER-->
+
+	<div class="container-header">
+		<div class="slidershow">
+			<div class="header-slides">
+				<input type="radio" name="temp-for-nav" id="r1" checked />
+				<input type="radio" name="temp-for-nav" id="r2" />
+				<input type="radio" name="temp-for-nav" id="r3" />
+				<input type="radio" name="temp-for-nav" id="r4" />
+				<input type="radio" name="temp-for-nav" id="r5" />
+				<div class="header-slide active-header-slide">
+					<img src="Image/1.png" alt="" />
+					<div class="text-wrapper-image">
+						<h1>Indulge in luxury</h1>
+						<h6>Sumptuous paradise in the heart of the city</h6>
+					</div>
+				</div>
+				<div class="header-slide">
+					<img src="Image/5.png" alt="" />
+					<div class="text-wrapper-image">
+						<h1>A View To Die For</h1>
+						<h6>More than paradise</h6>
+					</div>
+				</div>
+
+				<div class="header-slide">
+					<img src="Image/3.png" alt="" />
+					<div class="text-wrapper-image">
+						<h1>Fast, Friendly First Contact</h1>
+						<h6>
+							"They should be happy to serve guests, and not angling for a
+							tip"
+						</h6>
+					</div>
+				</div>
+				<div class="header-slide">
+					<img src="Image/4.png" alt="" />
+					<div class="text-wrapper-image">
+						<h1>More Blue, More Green, More Fresh</h1>
+						<h6>
+							"The smell of the carpet in a hotel room is the same everywhere"
+						</h6>
+					</div>
+				</div>
+				<div class="header-slide">
+					<img src="Image/2.png" alt="" />
+					<div class="text-wrapper-image">
+						<h1>Lavish & Comfort</h1>
+						<h6>
+							Super-luxury hotels are being built in outer space. The new type
+							of heaven is being offered to humans
+						</h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="navigation-header">
+				<label for="r1" class="bar"></label>
+				<label for="r2" class="bar"></label>
+				<label for="r3" class="bar"></label>
+				<label for="r4" class="bar"></label>
+				<label for="r5" class="bar"></label>
+			</div>
+		</div>
+	</div>
+
+	<!-- box order -->
+
+	<div id="containerOrderBox" class="container-order-box shadow rounded p-4">
+		<div class="container-order">
+			<form>
+				<div class="form-row text-dark">
+					<div class="col-auto col-md-6 col-lg-3 p-auto m-auto m-md-auto m-lg-auto">
+						<fieldset>
+							<legend><label class="" for="checkin">Check In</label>:</legend>
+							<input type="date" class="form-control" id="checkin" name="checkin" placeholder="">
+						</fieldset>
+
+					</div>
+					<div class="col-auto col-md-6 col-lg-3 p-auto m-auto m-md-auto m-lg-auto">
+						<fieldset>
+							<legend><label class="" for="checkout">Check Out</label>:</legend>
+							<input type="date" class="form-control" id="checkout" name="checkout" placeholder="">
+						</fieldset>
+					</div>
+					<div class="col-auto col-md-6 col-lg-2 p-auto p-md-auto p-lg-auto">
+
+						<fieldset>
+							<legend><label class="" for="guest" style="margin: 0 20%">Guest</label></legend>
+
+							<a id="downG" href="#/" onclick="changeNumber(this);" class="btn"
+								style="text-decoration: none;">-</a>
+							<input id="number_guest" value="1" type="number" min="1"
+								style="width:40px; padding: auto" />
+							<a id="upG" href="#/" onclick="changeNumber(this);" class="btn"
+								style="text-decoration: none;">+</a>
+						</fieldset>
+					</div>
+					<div class="col-auto col-md-6 col-lg-2 m-auto p-auto m-md-auto m-lg-auto">
+
+						<fieldset>
+							<legend><label class="" for="room" style="margin: 0 20%">Room</label></legend>
+							<a id="downR" href="#/" onclick="changeNumber(this);" class="btn"
+								style="text-decoration: none;">-</a>
+							<input id="number_room" value="1" type="number" min="1" max="10"
+								style="width:40px; padding: auto" />
+							<a id="upR" href="#/" onclick="changeNumber(this);" class="btn"
+								style="text-decoration: none;">+</a>
+						</fieldset>
+					</div>
+					<div class="col-12 col-md-4 col-lg-2 m-auto p-auto p-md-auto p-lg-auto">
+						<button id="buttonfind" type="submit" class="btn btn-lg w-100"><span><i class="fa fa-search"
+									aria-hidden="true"></i></span></button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- box order -->
+
+	<!-- Charming accomodation -->
+	<div id="container-content-charming" class="container">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3 mt-md-auto">
+				<img src="Image/hinhnhincaiho.png" style="width:100%">;
+			</div>
+			<div id="container-content-charming-text" class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+				<div>CHARMING ACCOMODATION</div>
+				<h2>Incredible Views Lush Comfort</h2>
+				Are you looking to surprise that special someone with a romantic getaway, or would you like to indulge
+				in a culinary
+				feast until the sun goes down, maybe you’d like to unwind while enjoying an amazing bike ride through
+				the dunes?
+				We’re now offering 9 spe- cial arrangements that take leisure to a whole other level.
+			</div>
+		</div>
+	</div>
+	<!-- Charming accomodation -->
+
+	<!-- Activity season grid -->
+
+	<div class="container-activity-grid container-fluid">
+		<div class="row">
+			<div id="image1" class="col-6 col-md-3 mt-3">
+				<img src="Image/kytucxa.png"
+					class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+					alt="">
+				<div class="activity-desc1">
+					<h3>Elegant</h3>
+					<div>ACCOMMODATION</div>
+				</div>
+			</div>
+			<div id="image2" class="col-6 col-md-3 mt-3">
+				<img src="Image/hinhnhinrangoaibuoitoi.png"
+					class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+					alt="">
+				<div class="activity-desc2">
+					<h3>Romantic</h3>
+					<div>Are you looking to surprise that special one with a romantic getaway, or would you like</div>
+				</div>
+			</div>
+			<div id="image3" class="col-6 col-md-3 mt-3">
+				<img src="Image/phongngambien.png"
+					class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+					alt="">
+				<div class="activity-desc3">
+					<h3>Majestic</h3>
+					<div>ACCOMMODATION</div>
+				</div>
+			</div>
+			<div id="image4" class="col-6 col-md-3 mt-3">
+				<img src="Image/hinhnetflix.png"
+					class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+					alt="">
+				<div class="activity-desc">
+					<h3>Season</h3>
+					<div>ACCOMMODATION</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Activity grid -->
+
+	<!-- special offers -->
+	<div class="container-offer my-3">
+		<img id="offer-background" src="Image/baibienxanhdep.png"
+			class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""
+			style="display: block; width: 100%; height: 90vh">
+		<div class="offer-info">
+			<div class="card-deck">
+				<div class="card">
+					<img class="card-img-top" src="Image/hinhnhanvien.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">30% for 4 people</h5>
+						<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+							additional
+							content. This content is a little bit longer.</p>
+						<p class="card-text"><small class="text-muted"><a href="#">See more...</a></small></p>
+
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">Jan, 4 2019 &#8594 Feb, 5 2019</small>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="Image/doan2.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">All day Buffet</h5>
+						<p class="card-text">You can eat what the fuck you want</p>
+						<p class="card-text"><small class="text-muted"><a href="#">See more...</a></small></p>
+
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">June, 12 2019 &#8594 Feb, 5 2020</small>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="Image/massage.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Relieve Stress sale up to 50%</h5>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+							additional
+							content. This card has even longer content than the first to show that equal height action.
+						</p>
+						<p class="card-text"><small class="text-muted"><a href="#">See more...</a></small></p>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">Dec, 2 2019 &#8594 Dec, 24 2019</small>
+					</div>
+				</div>
+			</div>
+			<a name="specialoffers" id="button-specialoffers" class="btn btn-primary btn-lg" href="#/"
+				role="button">more
+				special
+				offers</a>
+		</div>
+	</div>
+
+	<!-- special offers -->
+
+
+	<!-- review saying-->
+
+	<div class="container-review my-3 pt-3">
+		<div class="review-label">
+			<h3>our reviews</h3>
+			<h2>What guests are saying:</h2>
+		</div>
+		<!-- Full-width slides/quotes -->
+		<div class="review-slides">
+			<q>Ut natum malorum docendi pri, pro melius antiopam ad, magna nihil perpetua ius ad. Ad elitr dicunt sea,
+				an utroque
+				democritum disputationi cum, dicit primis iracundia an est. Legendos accusata pro ei, delectus
+				conclusionemque
+				vix ea. Iisque concludaturque conclusionemque ei nec. Lorem ipsum dolor sit amet, ullum consul commune
+				et duo. Te
+				insolens corrumpit mea. Id vel quem lucilius.</q>
+			<p class="author"><img src="Image/people3.jpg" class="img-fluid rounded-circle" alt="">John Keats</p>
+		</div>
+
+		<div class="review-slides">
+			<q>But man is not made for defeat. A man can be destroyed but not
+				defeated.</q>
+			<p class="author"><img src="Image/people1.jpg" class="img-fluid rounded-circle" alt=""> Hemingway
+			</p>
+		</div>
+
+		<div class="review-slides">
+			<q>I have not failed. I've just found 10,000 ways that won't work.</q>
+			<p class="author"><img src="Image/people2.jpg" class="img-fluid rounded-circle" alt="">Sarah Larson</p>
+		</div>
+
+		<!-- review-button-next/review-slides buttons -->
+		<a class="review-button-previous" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="review-button-next" onclick="plusSlides(1)">&#10095;</a>
+		<!-- Dots/bullets/indicators -->
+		<div class="review-container-dot">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+	</div>
+
+
+
+	<!-- google map -->
+	<div class="container-googlemap container-fluid my-3">
+		<div class="row">
+			<div class="col-12 col-md-6 p-2">
+				<div class="googleMap-info">
+					<div>PERFECT SPOT</div>
+					<div class="icon-googlemap" style="font-size: 24px"><i class="fas fa-route fa-7x"></i></div>
+					<h2>Located right in thick of it.</h2>
+					<p>Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor Roaring Fork
+						Road, no.45, Aspen
+						CO. Lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum
+						faucibus eget
+						in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla
+						facilisi. Duis
+						aliquet egestas purus in blandit.</p>
+					<h4>Aspen Airport (ASE) to Alpine Lodge Resort</h4>
+					<ul class="">
+						<li class=" ">Turn right out of Aspen Airport.</li>
+						<li class="">Turn right out of Aspen Airport.</li>
+						<li class=''>Highway 82 will “S” curve and become Main Street."> </li>
+						<li class="">Turn right at the second stop light onto Monarch Street.</li>
+						<li class="">Go to the stop sign past Wagner Park and continue straight.</li>
+					</ul>
+					<div class="googleMap-info-image">
+						<img src="Image/dapxedap.png" class="img-fluid rounded-circle" alt="">
+					</div>
+
+				</div>
+
+			</div>
+			<div class="col-12 col-md-6 p-2">
+				<div id="googleMap" style="width:100%;height:100%;"></div>
+
+			</div>
+		</div>
+	</div>
+	<!-- google map -->
+
+
+
+	<!-- Footer -->
+	<footer id="footer" class="page-footer font-small blue-grey lighten-5">
+		<div class="footer-head" style="background-color: #21d192;">
+			<div class="container">
+				<div class="row py-4 d-flex align-items-center">
+					<div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+						<h6 class="mb-0">Get connected with us on social networks!</h6>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="container text-center text-md-left mt-5 footer-body">
+			<div class="row mt-3 dark-grey-text">
+				<div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+					<h6 class="text-uppercase font-weight-bold">Company name</h6>
+					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;" />
+					<p>
+						Here you can use rows and columns to organize your footer content.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					</p>
+				</div>
+
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+					<h6 class="text-uppercase font-weight-bold">Products</h6>
+					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;" />
+					<p>
+						<a class="dark-grey-text" href="#!">MDBootstrap</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">MDWordPress</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">BrandFlow</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Bootstrap Angular</a>
+					</p>
+				</div>
+
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+					<h6 class="text-uppercase font-weight-bold">Useful links</h6>
+					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;" />
+					<p>
+						<a class="dark-grey-text" href="#!">Your Account</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Become an Affiliate</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Shipping Rates</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Help</a>
+					</p>
+				</div>
+
+				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+					<h6 class="text-uppercase font-weight-bold">Contact</h6>
+					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;" />
+					<p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+					<p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+					<p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+					<p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Links -->
+
+		<!-- Copyright -->
+		<div class="footer-footer d-flex py-3">
+			<div class="footer-footer-name mx-auto">
+				© The Dreamer Hotel | Made by
+				<a href="https://www.instagram.com/flnok/">Nguyen Huu Canh</a>
+			</div>
+			<div class="footer-footer-logo mx-auto">
+				<!-- Facebook -->
+				<a class="fb-ic">
+					<i class="fab fa-facebook-f  mr-4"> </i>
+				</a>
+				<!-- Twitter -->
+				<a class="tw-ic">
+					<i class="fab fa-twitter mr-4"> </i>
+				</a>
+				<!-- Google +-->
+				<a class="gplus-ic">
+					<i class="fab fa-google-plus-g  mr-4"> </i>
+				</a>
+				<!--Linkedin -->
+				<a class="li-ic">
+					<i class="fab fa-linkedin-in mr-4"> </i>
+				</a>
+				<!--Instagram-->
+				<a class="ins-ic">
+					<i class="fab fa-instagram "> </i>
+				</a>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer -->
+
+	<!-- button scroll top -->
+
+	<button id="button-scroll-top" style="scroll-behavior: initial;">
+		<i class="fas fa-chevron-up"></i>
+	</button>
+	<!-- button scroll top -->
+
+	<script src="js/app.js">
+	</script>
+	<!-- pooper -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<!-- bootstrap js -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkOWuntBVPS7_vKlyvj3oCRCGc6OJUJPc&callback=myMap">
+	</script>
+</body>
+
+</html>
