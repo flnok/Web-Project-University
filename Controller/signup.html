@@ -23,6 +23,37 @@
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <style>
+        .card-body {
+            position: relative;
+        }
+
+        h4::before {
+            content: "";
+            height: 2px;
+            width: 30%;
+            background: #d4d4d4;
+            position: absolute;
+            left: 10px;
+            top: 5%;
+            /* z-index: 2; */
+        }
+
+        h4::after {
+            content: "";
+            height: 2px;
+            width: 30%;
+            background: #d4d4d4;
+            position: absolute;
+            right: 10px;
+            top: 5%;
+        }
+
+        hr {
+            border: 1px solid white;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,14 +83,14 @@
                             <div class="form-label-group">
                                 <input type="password" id="inputPasswordAgain" class="form-control"
                                     placeholder="Retype Password" required>
-                                <label for="inputPassword">Retype Password</label>
+                                <label for="inputPasswordAgain">Confirm Password</label>
                             </div>
 
                             <button type="submit" class="btn btn-lg btn-primary btn-block text-uppercase my-3">Sign
                                 up</button>
 
                             <div class="mt-3">
-                                <a href="#">Already have one ?</a>
+                                <a href="signin.html">Already have one ?</a>
                             </div>
 
                             <hr class="my-4">

@@ -23,6 +23,37 @@
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        .card-body {
+            position: relative;
+        }
+
+        h4::before {
+            content: "";
+            height: 2px;
+            width: 30%;
+            background: #d4d4d4;
+            position: absolute;
+            left: 10px;
+            top: 5%;
+            /* z-index: 2; */
+        }
+
+        h4::after {
+            content: "";
+            height: 2px;
+            width: 30%;
+            background: #d4d4d4;
+            position: absolute;
+            right: 10px;
+            top: 5%;
+
+        }
+
+        hr {
+            border: 1px solid white;
+        }
+    </style>
 </head>
 
 <body>
@@ -61,6 +92,7 @@
                             <button type="submit" class="btn btn-lg btn-primary btn-block text-uppercase my-3">Sign
                                 in</button>
 
+                            <a href="signup.html" style="color: white;">I don't have an account</a>
 
                             <hr class="my-4">
                             <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i

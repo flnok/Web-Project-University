@@ -400,6 +400,22 @@ input[name="temp-for-nav"] {
     justify-content: space-around;
 }
 
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
 .text-wrapper-image h1,
 .text-wrapper-image h6 {
     font-family: "Cormorant Garamond", serif;
@@ -445,12 +461,13 @@ input[name="temp-for-nav"] {
     background: #b8e2f6;
     border: 4px none black;
     z-index: 9;
-    background: #e1eec3;
+    background: #aa4b6b;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f05053, #e1eec3);
+    background: -webkit-linear-gradient(to left, #3b8d99, #6b6b83, #aa4b6b);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f05053, #e1eec3);
+    background: linear-gradient(to left, #3b8d99, #6b6b83, #aa4b6b);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 #number_room,
@@ -475,6 +492,7 @@ input[name="temp-for-nav"] {
     text-transform: uppercase;
     color: #30336b;
     border-color: #30336b;
+    background-color: #f1f1f1f1;
 }
 
 #buttonfind:hover {
@@ -836,9 +854,6 @@ input[name="temp-for-nav"] {
 .googleMap-info-image img {
     opacity: .2;
 }
-
-
-#googlemMap {}
 
 /* FOOTER */
 
