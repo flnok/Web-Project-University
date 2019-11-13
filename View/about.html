@@ -127,27 +127,39 @@
         <p style="color: #BDC581;"></p>
     </div>
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark d-flex sticky-top w-100">
+    <nav id="about-navbar" class="navbar navbar-expand-sm bg-dark navbar-dark d-flex sticky-top w-100">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-around align-item-center" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link" href="/index.html">Trang chủ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="#!" id="otherAbout">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="booking.html">Booking</a>
+                    <a class="nav-link" href="/View/booking.html">Đặt phòng</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="account.html">Account</a>
+                    <a class="nav-link" href="/View/account.html">Tài khoản</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#!" id="otherContact">
-                        Contact</a>
+                        Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!" id="otherRule">
+                        Nội quy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/View/rulebooking.html">
+                        Quy định đặt phòng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/View/room.html">
+                        Phòng</a>
                 </li>
             </ul>
         </div>
@@ -403,7 +415,8 @@
     <footer class="page-footer font-small stylish-color-dark pt-4 w-100">
 
         <!-- Call to action -->
-        <ul class="list-unstyled list-inline text-center py-2 bg-secondary text-light" style="height: 100px;">
+        <ul id="about-ask" class="list-unstyled list-inline text-center py-2 bg-secondary text-light"
+            style="height: 100px;">
             <li class="list-item">
                 <h5 class="mb-2"> Bạn có câu hỏi cần hỏi?</h5>
             </li>
@@ -415,7 +428,6 @@
             </li>
         </ul>
         <!-- Call to action -->
-
         <hr>
 
         <div class="bg-dark p-3 text-light">
@@ -480,77 +492,97 @@
     </div>
 
     <script>
-        $(".collapse.show").each(function () {
-            $(this).prev(".card-header").addClass("highlight");
-        });
+        $(document).ready(function () {
 
-        // Highlight open collapsed element 
-        $(".card-header .btn").click(function () {
-            $(".card-header").not($(this).parents()).removeClass("highlight");
-            $(this).parents(".card-header").toggleClass("highlight");
-        });
-        $("#about-side-nav a").click(function (e) {
-            e.preventDefault();
-            // If this isn't already active
-            if (!$(this).hasClass("active")) {
-                // Remove the class from anything that is active
-                $("a.active").removeClass("active");
-                // And make this active
-                $(this).addClass("active");
 
-                if ($(this).is("#about-hello")) {
-                    $("#show-content-about").load("about-child.html");
-                } else if ($(this).is("#about-contact")) {
-                    $("#show-content-about").load("about-contact.html");
-                } else if ($(this).is("#about-rule")) {
-                    $("#show-content-about").load("about-rule.html");
+            $(".collapse.show").each(function () {
+                $(this).prev(".card-header").addClass("highlight");
+            });
+
+            // Highlight open collapsed element
+            $(".card-header .btn").click(function () {
+                $(".card-header").not($(this).parents()).removeClass("highlight");
+                $(this).parents(".card-header").toggleClass("highlight");
+            });
+            $("#about-side-nav a").click(function (e) {
+                e.preventDefault();
+                // If this isn't already active
+                if (!$(this).hasClass("active")) {
+                    // Remove the class from anything that is active
+                    $("a.active").removeClass("active");
+                    // And make this active
+                    $(this).addClass("active");
+
+                    if ($(this).is("#about-hello")) {
+                        $("#show-content-about").load("about-child.html");
+                    } else if ($(this).is("#about-contact")) {
+                        $("#show-content-about").load("about-contact.html");
+                    } else if ($(this).is("#about-rule")) {
+                        $("#show-content-about").load("about-rule.html");
+                    }
                 }
+            });
+
+            $('#otherContact').click(function (e) {
+                e.preventDefault();
+                $("#about-side-nav a.active").removeClass("active");
+                $("#about-navbar a.active").removeClass("active");
+                // And make this active
+                $('#about-contact').addClass("active");
+                $('#otherContact').addClass("active");
+
+                // load
+
+                $('#show-content-about').load('about-contact.html');
+                //scroll
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#show-content-about").offset().top
+                }, 700);
+            })
+
+            $('#otherAbout').click(function (e) {
+                e.preventDefault();
+                $("#about-side-nav a.active").removeClass("active");
+                $("#about-navbar a.active").removeClass("active");
+
+                // And make this active
+                $('#about-hello').addClass("active");
+                $('#otherAbout').addClass("active");
+
+                // load
+
+                $('#show-content-about').load('about-child.html');
+                //scroll
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#show-content-about").offset().top
+                }, 700);
+            })
+
+            $('#otherRule').click(function (e) {
+                e.preventDefault();
+                $("#about-side-nav a.active").removeClass("active");
+                $("#about-navbar a.active").removeClass("active");
+
+                // And make this active
+                $('#about-rule').addClass("active");
+                $('#otherRule').addClass("active");
+
+                // load
+
+                $('#show-content-about').load('about-rule.html');
+                //scroll
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#show-content-about").offset().top
+                }, 700);
+            })
+
+            $("#show-content-about").load("about-child.html");
+
+            var hash = window.location.hash;
+            if (hash) {
+                $(hash).click();
             }
         });
-
-        $('#otherContact').click(function (e) {
-            e.preventDefault();
-            $("#about-side-nav a.active").removeClass("active");
-            // And make this active
-            $('#about-contact').addClass("active");
-            // load
-
-            $('#show-content-about').load('about-contact.html');
-            //scroll
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $("#show-content-about").offset().top
-            }, 700);
-        })
-
-        $('#otherAbout').click(function (e) {
-            e.preventDefault();
-            $("#about-side-nav a.active").removeClass("active");
-            // And make this active
-            $('#about-hello').addClass("active");
-            // load
-
-            $('#show-content-about').load('about-child.html');
-            //scroll
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $("#show-content-about").offset().top
-            }, 700);
-        })
-
-        $('#otherRule').click(function (e) {
-            e.preventDefault();
-            $("#about-side-nav a.active").removeClass("active");
-            // And make this active
-            $('#about-hello').addClass("active");
-            // load
-
-            $('#show-content-about').load('about-rule.html');
-            //scroll
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $("#show-content-about").offset().top
-            }, 700);
-        })
-
-        $("#show-content-about").load("about-child.html");
     </script>
 </body>
 
