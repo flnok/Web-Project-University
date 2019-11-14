@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Confirm Booking</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7b3b63fc99.js" crossorigin="anonymous"></script>
+
+    <style>
+        #brand-name {
+            color: #F2EEEB;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        #main {
+            height: 100vh;
+        }
+
+        .modal-confirm {
+            color: #636363;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        .modal-confirm .btn {
+            color: #fff;
+            border-radius: 4px;
+            background: #82ce34;
+            text-decoration: none;
+            transition: all 0.4s;
+            line-height: normal;
+            border: none;
+        }
+
+        .modal-confirm .btn:hover,
+        .modal-confirm .btn:focus {
+            background: #6fb32b;
+            outline: none;
+        }
+
+
+
+
+
+
+        .icon-box {
+            width: 99px;
+            height: 99px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            background-color: #82ce34;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a id="brand-name" class="navbar-brand mx-auto" href="/index.html">The Dreamer Hotel</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Controller/signup.html">Regsiter
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Controller/signin.html">Sign in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Content -->
+    <div class="d-flex justify-content-center align-items-center" id="main">
+        <h1 class="mr-3 pr-3 align-top border-right inline-block align-content-center">404</h1>
+        <div class="inline-block align-middle">
+            <h2 class="font-weight-normal lead" id="desc">The page you requested was not found.</h2>
+            <a name="" id="" class="btn btn-primary text-center" href="/index.html" role="button"><i class="fa fa-home "
+                    aria-hidden="true"></i> Take me home </a>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small stylish-color-dark pt-4 w-100">
+        <div class="bg-dark p-3 text-light">
+            <!-- Social buttons -->
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <button class="btn btn-facebook btn-link btn-icon-only btn-circle waves-effect ">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                </li>
+                <li class="list-inline-item">
+                    <button class="btn btn-twitter btn-link btn-icon-only btn-circle waves-effect waves-teal text-info">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                </li>
+                <li class="list-inline-item">
+                    <button
+                        class="btn btn-google btn-link btn-icon-only btn-circle waves-effect waves-red btn-lg text-danger">
+                        <i class="fab fa-google-plus-g"></i>
+                    </button>
+                </li>
+            </ul>
+            <!-- Social buttons -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3" style="color: #BDC581; ">© 2019 Copyright: Khách sạn
+                người
+                mơ
+            </div>
+            <!-- Copyright -->
+        </div>
+    </footer>
+    <!-- Footer -->
+    <!-- Modal success -->
+    <div id="succesModal" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-md modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header" style="position: relative; height: 8rem;" class="d-flex flex-column">
+                    <div class="icon-box m-auto">
+                        <i class="far fa-check-circle fa-6x text-light"></i>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title text-center mb-5 ">Awesome!</h4>
+                    <p class="text-center">Your booking has been confirmed. Check your email for detials.</p>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-success btn-block" data-dismiss="/index.html">OK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(window).on('load', function () {
+            $('#succesModal').modal('show');
+        });
+    </script>
+</body>
+
+</html>
