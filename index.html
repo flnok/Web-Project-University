@@ -135,7 +135,7 @@
 				<div class="col">
 					<div class="home_content text-center">
 						<div class="booking_form_container">
-							<form action="#" class="booking_form" id="booking_form">
+							<form action="/View/booking.html" class="booking_form" id="booking_form">
 								<div class="d-flex flex-xl-row flex-column align-items-start justify-content-start">
 									<div
 										class="booking_input_container d-flex flex-row align-items-start justify-content-start flex-wrap">
@@ -146,9 +146,9 @@
 												class="datepicker booking_input booking_input_a booking_out"
 												placeholder="Check out" required="required" id="checkoutid"></div>
 										<div><input type="number" class="booking_input booking_input_b"
-												placeholder="People" required="required"></div>
+												placeholder="People" min="1" max="50" required></div>
 										<div><input type="number" class="booking_input booking_input_b"
-												placeholder="Room" required="required"></div>
+												placeholder="Room" min="1" max="9" required></div>
 									</div>
 									<div><button class="booking_button">Book Now</button></div>
 								</div>
